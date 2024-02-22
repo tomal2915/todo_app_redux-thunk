@@ -1,3 +1,4 @@
+import CancelImg from "../../assets/cancel.png";
 import { useDispatch } from "react-redux";
 import updateTodoStatus from "../../redux/todos/thunk/updateTodoStatus";
 import updateColor from "../../redux/todos/thunk/updateColor";
@@ -66,7 +67,7 @@ const Todo = ({ todo }) => {
       ></div>
 
       <img
-        src="./src/assets/cancel.png"
+        src={CancelImg}
         className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
         alt="Cancel"
         onClick={() => handleDelete(id)}

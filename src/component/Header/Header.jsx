@@ -1,3 +1,6 @@
+import NotesImg from "../../assets/notes.png";
+import PlusImg from "../../assets/plus.png";
+import DoubleTickImg from "../../assets/double-tick.png";
 import { allcompleted, clearcompleted } from "../../redux/todos/actions";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
@@ -31,7 +34,7 @@ const Header = () => {
         className="flex items-center bg-gray-100 px-4 py-4 rounded-md"
         onSubmit={handleSubmit}
       >
-        <img src="./src/assets/notes.png" className="w-6 h-6" alt="Add todo" />
+        <img src={NotesImg} className="w-6 h-6" alt="Add todo" />
         <input
           type="text"
           placeholder="Type your todo"
@@ -41,7 +44,8 @@ const Header = () => {
         />
         <button
           type="submit"
-          className="appearance-none w-8 h-8 bg-[url('./src/assets/plus.png')] bg-no-repeat bg-contain"
+          className={`appearance-none w-8 h-8 bg-no-repeat bg-contain`}
+          style={{ backgroundImage: `url(${PlusImg})` }}
         ></button>
       </form>
 
@@ -49,7 +53,7 @@ const Header = () => {
         <li className="flex space-x-1 cursor-pointer" onClick={completeAll}>
           <img
             className="w-4 h-4"
-            src="./src/assets/double-tick.png"
+            src={DoubleTickImg}
             alt="Complete"
           />
           <span>Complete All Tasks</span>
