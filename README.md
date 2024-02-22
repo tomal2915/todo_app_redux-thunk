@@ -19,7 +19,10 @@ Users can mark individual todo tasks as complete or incomplete.
 ### 5. Color Marking
 Users can assign colors to todo tasks for better organization and visualization.
 
-### 6. Filtering
+### 6. Delete
+Users can delete individual todo tasks.
+
+### 7. Filtering
 Users can filter todo tasks based on different criteria:
 - All: Show all todo tasks.
 - Complete: Show only completed todo tasks.
@@ -32,6 +35,10 @@ Users can filter todo tasks based on different criteria:
 2. Install dependencies using `npm install`.
 3. Start the application using `npm start`.
 4. Use the application to manage your todo tasks efficiently.
+
+## Live Demo
+
+Check out the live demo [here](https://your-live-demo-url.com).
 
 ## Technologies Used
 
