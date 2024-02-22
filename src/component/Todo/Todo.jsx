@@ -1,20 +1,22 @@
-import { colorselected, deleted, toggled } from "../../redux/todos/actions";
 import { useDispatch } from "react-redux";
+import updateTodoStatus from "../../redux/todos/thunk/updateTodoStatus";
+import updateColor from "../../redux/todos/thunk/updateColor";
+import updateDelete from "../../redux/todos/thunk/updateDelete";
 
 const Todo = ({ todo }) => {
   const dispatch = useDispatch();
   const { id, text, completed, color } = todo;
 
   const handleStatusToggle = (todoId) => {
-    dispatch(toggled(todoId));
+    dispatch(updateTodoStatus(todoId, completed));
   };
 
   const handleColorSelected = (todoId, color) => {
-    dispatch(colorselected(todoId, color));
+    dispatch(updateColor(todoId, color));
   };
 
   const handleDelete = (todoId) => {
-    dispatch(deleted(todoId));
+    dispatch(updateDelete(todoId));
   };
 
   return (
