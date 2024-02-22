@@ -1,6 +1,7 @@
-import { added, allcompleted, clearcompleted } from "../../redux/todos/actions";
+import { allcompleted, clearcompleted } from "../../redux/todos/actions";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import addTodo from "../../redux/todos/thunk/addTodo";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(added(input));
+    dispatch(addTodo(input));
     setInput("");
   };
 
